@@ -3,14 +3,25 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  /*DEFAULT :  1 rem = 16px -> 50rem = 800px 
+
+REM - Root size(font size in HTML)*/
+  /* font-size: 10px; 
+   10px / 16px = 0.625 = 62.5%
+   Percentage of user's browser font-size setting
+   
+   1rem = 10px */
+  font-size: 62.5%;
+}
 
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
   line-height: 1.7;
   color: #777;
   padding: 30px;
+  font-size: 1.6rem;
 }
 
 .header {
@@ -23,6 +34,43 @@ body {
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
+  position: relative;
 
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+}
+
+.logo-box {
+  position: absolute;
+  top: 4rem;
+  left: 4rem;
+}
+
+.logo {
+  height: 3.5rem;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heading-primary-main,
+.heading-primary-sub {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.heading-primary-main {
+  font-size: 6rem;
+  font-weight: 400;
+  letter-spacing: 3.5rem;
+}
+
+.heading-primary-sub {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 1.74rem;
 }
