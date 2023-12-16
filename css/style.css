@@ -56,21 +56,67 @@ body {
   transform: translate(-50%, -50%);
 }
 
-.heading-primary-main,
-.heading-primary-sub {
-  display: block;
+.heading-primary {
   color: #fff;
   text-transform: uppercase;
+
+  backface-visibility: hidden;
 }
 
 .heading-primary-main {
+  display: block;
   font-size: 6rem;
   font-weight: 400;
   letter-spacing: 3.5rem;
+
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+
+  /* 
+  animation-delay: 3s;
+  animation-iteration-count: 3;
+  
+  */
 }
 
 .heading-primary-sub {
+  display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.74rem;
+
+  /* no need to write ani-name, ani-dur or ani-ti-f, instead do this and vsc reads it */
+  animation: moveInRight 1s ease-out;
+}
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0rem);
+  }
 }
