@@ -1,0 +1,18 @@
+{
+  "name": "nawoo",
+  "version": "1.0.0",
+  "description": "Landing page for nawoo",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "npx sass sass/main.scss css/style.compile.css",
+    "watch:sass": "nodemon -e scss -x \"npm run compile:sass\""
+  },
+  "author": "Lazar",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  },
+  "dependencies": {
+    "sass": "^1.69.5"
+  }
+}
