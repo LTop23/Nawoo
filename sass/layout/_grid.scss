@@ -2,9 +2,13 @@
   display: grid;
   row-gap: 6rem;
   column-gap: 8rem;
+  max-width: 114rem;
+  margin: 0 auto;
 }
 
 .grid--2-cols {
+  margin: 0 auto;
+
   grid-template-columns: repeat(2, 1fr);
 }
 .grid--3-cols {
